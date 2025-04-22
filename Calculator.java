@@ -1,0 +1,396 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
+package javaapplication21;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author Admin
+ */
+public class Calculator extends javax.swing.JFrame {
+
+    /**
+     * Creates new form Calculator
+     */
+    public Calculator() {
+        initComponents();
+    }
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        menuBar1 = new java.awt.MenuBar();
+        menu1 = new java.awt.Menu();
+        menu2 = new java.awt.Menu();
+        jbcong = new javax.swing.JButton();
+        jbtru = new javax.swing.JButton();
+        jbnhan = new javax.swing.JButton();
+        jbchia = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        txtSo2 = new javax.swing.JTextField();
+        txtSo1 = new javax.swing.JTextField();
+        txtKetQua = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jldocdulieutufilera = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        txtContent = new javax.swing.JTextArea();
+        btnLoad = new javax.swing.JButton();
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        menu1.setLabel("File");
+        menuBar1.add(menu1);
+
+        menu2.setLabel("Edit");
+        menuBar1.add(menu2);
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jbcong.setText("Cộng");
+        jbcong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbcongActionPerformed(evt);
+            }
+        });
+
+        jbtru.setText("Trừ");
+        jbtru.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtruActionPerformed(evt);
+            }
+        });
+
+        jbnhan.setText("Nhân");
+        jbnhan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbnhanActionPerformed(evt);
+            }
+        });
+
+        jbchia.setText("Chia");
+        jbchia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbchiaActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Nhập số thứ nhất");
+
+        jLabel2.setText("Nhập số thứ hai");
+
+        txtSo2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSo2ActionPerformed(evt);
+            }
+        });
+
+        txtSo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSo1ActionPerformed(evt);
+            }
+        });
+
+        txtKetQua.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtKetQuaActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("kết quả");
+
+        jldocdulieutufilera.setText("Đọc dữ liệu từ file data.txt");
+
+        txtContent.setColumns(20);
+        txtContent.setRows(5);
+        jScrollPane3.setViewportView(txtContent);
+
+        btnLoad.setText("Cập nhật file lên");
+        btnLoad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoadActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jbcong)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(3, 3, 3)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jbtru)
+                    .addComponent(txtSo1, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                    .addComponent(txtSo2)
+                    .addComponent(txtKetQua))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(55, 55, 55)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(jldocdulieutufilera))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jbnhan)
+                                .addGap(65, 65, 65)
+                                .addComponent(jbchia))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(29, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnLoad)
+                .addGap(93, 93, 93))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbcong)
+                    .addComponent(jbtru)
+                    .addComponent(jbnhan)
+                    .addComponent(jbchia))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jldocdulieutufilera)
+                .addGap(2, 2, 2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(txtSo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(txtSo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(txtKetQua, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnLoad)
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+
+        pack();
+    }// </editor-fold>                        
+
+    private void jbcongActionPerformed(java.awt.event.ActionEvent evt) {                                       
+       try{ // TODO add your handling code here:try {
+        // Lấy giá trị từ các trường nhập liệu
+        String so1Str = txtSo1.getText();
+        String so2Str = txtSo2.getText();
+
+        // Chuyển đổi chuỗi thành số nguyên
+        int so1 = Integer.parseInt(so1Str);
+        int so2 = Integer.parseInt(so2Str);
+
+        // Tính trừ
+        int ketQua = so1 + so2;
+
+        // Hiển thị kết quả
+        txtKetQua.setText(String.valueOf(ketQua));
+        try {
+            FileWriter writer = new FileWriter("data.txt",true); // Tạo file hoặc ghi đè file cũ
+            writer.write(""+so1);
+            writer.write(" + " + so2);
+            writer.write(" = " + ketQua + "\n");
+            writer.close();
+            System.out.println("Da luu ket qua vao file data.txt!");
+        } catch (IOException e) {
+            System.out.println("Loi luu file: " + e.getMessage());
+        }
+    } catch (NumberFormatException e) {
+        // Hiển thị thông báo lỗi nếu không phải là số nguyên
+        JOptionPane.showMessageDialog(this, "Thông báo lỗi", "Lỗi", JOptionPane.ERROR_MESSAGE);
+    }
+    }                                      
+
+    private void txtSo2ActionPerformed(java.awt.event.ActionEvent evt) {                                       
+        // TODO add your handling code here:
+    }                                      
+
+    private void txtSo1ActionPerformed(java.awt.event.ActionEvent evt) {                                       
+        // TODO add your handling code here:
+    }                                      
+
+    private void txtKetQuaActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        // TODO add your handling code here:
+    }                                         
+
+    private void jbtruActionPerformed(java.awt.event.ActionEvent evt) {                                      
+    try{ // TODO add your handling code here:try {
+        // Lấy giá trị từ các trường nhập liệu
+        String so1Str = txtSo1.getText();
+        String so2Str = txtSo2.getText();
+
+        // Chuyển đổi chuỗi thành số nguyên
+        int so1 = Integer.parseInt(so1Str);
+        int so2 = Integer.parseInt(so2Str);
+
+        // Tính trừ
+        int ketQua = so1 - so2;
+
+        // Hiển thị kết quả
+        txtKetQua.setText(String.valueOf(ketQua));
+        try {
+            FileWriter writer = new FileWriter("data.txt",true); // Tạo file hoặc ghi đè file cũ
+            writer.write(""+so1);
+            writer.write(" - " + so2);
+            writer.write(" = " + ketQua + "\n");
+            writer.close();
+            System.out.println("Da luu ket qua vao file data.txt!");
+        } catch (IOException e) {
+            System.out.println("Loi luu file: " + e.getMessage());
+        }
+    } catch (NumberFormatException e) {
+        // Hiển thị thông báo lỗi nếu không phải là số nguyên
+        JOptionPane.showMessageDialog(this, "Thông báo lỗi", "Lỗi", JOptionPane.ERROR_MESSAGE);
+    }
+    }                                     
+
+    private void jbnhanActionPerformed(java.awt.event.ActionEvent evt) {                                       
+    // TODO add your handling code here:try {
+        // Lấy giá trị từ các trường nhập liệu
+        try{String so1Str = txtSo1.getText();
+        String so2Str = txtSo2.getText();
+
+        // Chuyển đổi chuỗi thành số nguyên
+        int so1 = Integer.parseInt(so1Str);
+        int so2 = Integer.parseInt(so2Str);
+
+        // Tính nhan
+        int ketQua = so1 * so2;
+
+        // Hiển thị kết quả
+        txtKetQua.setText(String.valueOf(ketQua));
+        try {
+            FileWriter writer = new FileWriter("data.txt",true); // Tạo file hoặc ghi đè file cũ
+            writer.write(""+so1);
+            writer.write(" * " + so2);
+            writer.write(" = " + ketQua + "\n");
+            writer.close();
+            System.out.println("Da luu ket qua vao file data.txt!");
+        } catch (IOException e) {
+            System.out.println("Loi luu file: " + e.getMessage());
+        }
+    } catch (NumberFormatException e) {
+        // Hiển thị thông báo lỗi nếu không phải là số nguyên
+        JOptionPane.showMessageDialog(this, "Thông báo lỗi", "Lỗi", JOptionPane.ERROR_MESSAGE);
+    }
+    }                                      
+
+    private void jbchiaActionPerformed(java.awt.event.ActionEvent evt) {                                       
+     try{String so1Str = txtSo1.getText();
+        String so2Str = txtSo2.getText();
+
+        // Chuyển đổi chuỗi thành số nguyên
+        int so1 = Integer.parseInt(so1Str);
+        int so2 = Integer.parseInt(so2Str);
+
+        // Tính chia
+        int ketQua = so1 / so2;
+
+        // Hiển thị kết quả
+        txtKetQua.setText(String.valueOf(ketQua));
+        try {
+            FileWriter writer = new FileWriter("data.txt",true); // Tạo file hoặc ghi đè file cũ
+            writer.write(""+so1);
+            writer.write(" / " + so2);
+            writer.write(" = " + ketQua + "\n");
+            writer.close();
+            System.out.println("Da luu ket qua vao file data.txt!");
+        } catch (IOException e) {
+            System.out.println("Loi luu file: " + e.getMessage());
+        }
+    } catch (NumberFormatException e) {
+        // Hiển thị thông báo lỗi nếu không phải là số nguyên
+        JOptionPane.showMessageDialog(this, "Thông báo lỗi", "Lỗi", JOptionPane.ERROR_MESSAGE);
+    }
+    }                                      
+
+    private void btnLoadActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        try (BufferedReader reader = new BufferedReader(new FileReader("data.txt"))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                txtContent.append(line + "\n"); // Thêm từng dòng vào JTextArea
+            }
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(this, "Lỗi khi đọc file: " + e.getMessage(), "Lỗi", JOptionPane.ERROR_MESSAGE);
+        }
+    }                                       
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Calculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Calculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Calculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Calculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(() -> {
+            new Calculator().setVisible(true);
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JButton btnLoad;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JButton jbchia;
+    private javax.swing.JButton jbcong;
+    private javax.swing.JButton jbnhan;
+    private javax.swing.JButton jbtru;
+    private javax.swing.JLabel jldocdulieutufilera;
+    private java.awt.Menu menu1;
+    private java.awt.Menu menu2;
+    private java.awt.MenuBar menuBar1;
+    private javax.swing.JTextArea txtContent;
+    private javax.swing.JTextField txtKetQua;
+    private javax.swing.JTextField txtSo1;
+    private javax.swing.JTextField txtSo2;
+    // End of variables declaration                   
+}
