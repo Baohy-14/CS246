@@ -1,0 +1,16 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = https://baohy-14@github.com/Baohy-14/CS246.git
+	url = https://github.com/lab5/repository.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[pack]
+	buildbitmaps = false
+[branch "lab3"]
+	remote = origin
+	merge = refs/heads/lab3
